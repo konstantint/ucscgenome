@@ -36,7 +36,7 @@ class Genome(TwoBitFile):
          
          * cache_dir - specifies the cache directory where to look for twobit files. Also, if file is not found, it will be downloaded there.
          * use_web - specifies whether it is allowed to use the web to download stuff and write to cache.
-         * reporthook - the reporthook provided to urlopen for tracking download progress. Must be a function (block_count, block_size, total_blocks), see urlretrieve documentation.
+         * reporthook - the reporthook provided to urlopen for tracking download progress. Must be a function (block_count, block_size, total_bytes), see urlretrieve documentation.
          * source_url_pattern - the way of constructing an URL from the given genome id. The '%(id)s' within the pattern will be replaced with the ID. 
          
         Note that not all genomes are available at UCSC in 2bit format (e.g. sacCer1 is not).
